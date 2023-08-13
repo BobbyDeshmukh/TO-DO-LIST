@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-sizing: border-box;
+}
+
+.container{
+
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(150deg, #0db13c, #95c729, rgb(166, 166, 31),black);
+    padding: 10px;
+}
+
+.todo{
+
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    box-shadow: 0 0 80px rgb(82, 77, 77);
+}
+
+.todo h2{
+    color: #183768;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+
+.textbox{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f1f1f0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+
+}
+
+input{
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 10px;
+    color: black;
+}
+
+button{
+    border: none;
+    font-weight: bold;
+    outline: none;
+    padding: 16px 50px;
+    background: #b7da71;    
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    /* transition: all 1s; */
+}
+
+
+ul li{
+    margin-left: 20px;
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 40px;
+    cursor: pointer;
+    position: relative; 
+}
+
+ul li::before{
+
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url('images/unchecked.png');
+    background-size: cover;  
+    background-position: center;
+    top: 10px;
+    left: 0;
+    z-index: 1;
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+
+
+ul li.checked::before{
+    background-image: url('images/correct.png');
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    transition: all 0.5s;
+    border-radius: 50px;
+}
+
+ul li span:hover{
+    background: #edeef0;
+}
+
+@media (max-width: 600px) {
+    .row button{
+        font-size: 14px;
+        margin-left: -37px;
+    }
+}
